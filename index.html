@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OmQua Systems — Premium brand identity mockup packs for designers and agencies. One PSD file, place your logo once, every branded scene updates instantly. From $4.99.">
+<meta property="og:title" content="OmQua Systems — Brand Identity Mockup Packs">
+<meta property="og:description" content="One PSD. Place your logo once. Every branded scene updates instantly. Professional mockup packs from $4.99.">
+<meta property="og:url" content="https://store.omqua.com">
+<meta property="og:type" content="website">
+<title>OmQua Systems — Brand Identity Mockup Packs</title>
+<style>
+/* ── RESET & BASE ── */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',
+  'Helvetica Neue',Arial,sans-serif;
+  background:#fff;color:#1d1d1f;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* ── BRAND TOKENS ── */
+:root{
+  --g1:#1E5C2B;--g2:#2A7A3B;--g3:#3D9950;
+  --g-pale:#F2F8F4;--g-mid-pale:#E2F0E7;--g-mint:#9FE1B0;
+  --white:#fff;--black:#000;
+  --ink-1:#1d1d1f;--ink-2:#424245;--ink-3:#6e6e73;--ink-4:#86868b;
+  --surface-1:#f5f5f7;--surface-2:#fbfbfd;
+  --border:#d2d2d7;--border-light:#e8e8ed;
+  --r-xl:28px;--r-lg:20px;--r-md:14px;--r-sm:8px;--r-pill:980px;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:0 8px 24px rgba(0,0,0,.1);
+  --shadow-lg:0 20px 48px rgba(0,0,0,.15);
+}
+
+/* ── ANNOUNCEMENT BAR ── */
+.ann{
+  background:var(--g1);color:#fff;
+  text-align:center;font-size:12px;
+  padding:10px 1.5rem;
+  letter-spacing:-.01em;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  flex-wrap:wrap;
+}
+.ann strong{color:var(--g-mint)}
+.ann a{color:var(--g-mint);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(159,225,176,.4)}
+.ann-cd{display:inline-flex;align-items:center;gap:4px}
+.cd-u{
+  background:var(--g-mint);color:var(--g1);
+  font-weight:700;font-size:10px;
+  padding:2px 6px;border-radius:4px;
+  min-width:22px;text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── NAV ── */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:48px;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(180%) blur(20px);
+  -webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(0,0,0,.08);
+  position:sticky;top:0;z-index:200;
+}
+.nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none;cursor:pointer}
+.nav-wordmark{display:flex;flex-direction:column;line-height:1}
+.nav-name{font-size:17px;font-weight:600;color:var(--g1);letter-spacing:-.02em}
+.nav-tagline{font-size:8.5px;font-weight:600;color:var(--ink-4);letter-spacing:.18em;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;gap:0}
+.nav-links a{
+  font-size:12px;color:var(--ink-3);text-decoration:none;
+  padding:0 13px;font-weight:400;cursor:pointer;
+  letter-spacing:-.01em;transition:color .15s;
+}
+.nav-links a:hover{color:var(--ink-1)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-icon-btn{
+  background:none;border:none;cursor:pointer;
+  font-size:16px;color:var(--ink-3);padding:4px;
+  transition:color .15s;
+}
+.nav-icon-btn:hover{color:var(--ink-1)}
+.nav-cta-pill{
+  font-size:12px;font-weight:600;
+  padding:6px 16px;border-radius:var(--r-pill);
+  background:var(--g1);color:#fff;
+  border:none;cursor:pointer;font-family:inherit;
+  letter-spacing:-.01em;transition:opacity .2s;
+  text-decoration:none;display:inline-flex;align-items:center;
+}
+.nav-cta-pill:hover{opacity:.84}
+
+/* ── HERO ── */
+.hero{
+  background:#000;
+  padding:6rem 2rem 0;
+  text-align:center;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 90% 70% at 50% 35%,#1E5C2B 0%,#0b2212 52%,#000 100%);
+  pointer-events:none;
+}
+.hero-noise{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;opacity:.4;
+}
+.hero-content{position:relative;z-index:2;max-width:740px;margin:0 auto}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--g-mint);
+  letter-spacing:.04em;margin-bottom:18px;
+}
+.hero-eyebrow::before,
+.hero-eyebrow::after{content:'';width:28px;height:1.5px;background:var(--g-mint);border-radius:1px;opacity:.5}
+.hero-h1{
+  font-size:64px;font-weight:700;color:#fff;
+  line-height:1.04;letter-spacing:-.045em;
+  margin-bottom:20px;
+}
+.hero-h1 .accent{color:var(--g-mint)}
+.hero-sub{
+  font-size:19px;font-weight:400;
+  color:rgba(255,255,255,.65);
+  line-height:1.55;letter-spacing:-.015em;
+  max-width:480px;margin:0 auto 36px;
+}
+.hero-ctas{
+  display:flex;gap:12px;justify-content:center;
+  align-items:center;margin-bottom:16px;flex-wrap:wrap;
+}
+.btn-hero-primary{
+  background:var(--g-mint);color:var(--g1);
+  font-size:15px;font-weight:600;
+  padding:14px 30px;border-radius:var(--r-pill);
+  border:none;cursor:pointer;font-family:inherit;
+  letter-spacing:-.01em;transition:all .2s;
+  text-decoration:none;display:inline-block;
+}
+.btn-hero-primary:hover{background:#b8ecc6;transform:scale(1.02)}
+.btn-hero-ghost{
+  background:rgba(255,255,255,.1);color:#fff;
+  font-size:15px;font-weight:500;
+  padding:14px 30px;border-radius:var(--r-pill);
+  border:1.5px solid rgba(255,255,255,.2);
+  cursor:pointer;font-family:inherit;
+  letter-spacing:-.01em;
+  backdrop-filter:blur(10px);transition:all .2s;
+  text-decoration:none;display:inline-block;
+}
+.btn-hero-ghost:hover{background:rgba(255,255,255,.18)}
+.hero-note{
+  font-size:12px;color:rgba(255,255,255,.32);
+  letter-spacing:-.01em;margin-bottom:48px;
+}
+.hero-note span{color:rgba(159,225,176,.7)}
+
+/* hero mockup cards */
+.hero-mocks{
+  position:relative;z-index:2;
+  display:flex;gap:14px;justify-content:center;
+  align-items:flex-end;padding-bottom:0;
+  margin:0 auto;
+}
+.hm{
+  border-radius:var(--r-lg);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;padding:18px 14px;
+  flex-shrink:0;
+  box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06);
+  position:relative;
+}
+.hm-ring{
+  width:44px;height:44px;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);
+}
+.hm-niche{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:600}
+.hm-div{width:32px;height:.5px;background:rgba(255,255,255,.1)}
+.hm-count{font-size:9px;color:rgba(255,255,255,.25);font-weight:500}
+.fpill{
+  position:absolute;
+  background:rgba(255,255,255,.96);
+  border-radius:var(--r-pill);
+  padding:7px 14px;font-size:11px;font-weight:600;
+  color:var(--ink-1);
+  box-shadow:0 8px 28px rgba(0,0,0,.28);
+  backdrop-filter:blur(10px);white-space:nowrap;
+}
+.fp-green{display:inline-block;width:7px;height:7px;border-radius:50%;background:#30D158;margin-right:5px;vertical-align:middle}
+
+/* ── TRUST BAR ── */
+.trust{
+  background:var(--surface-1);
+  border-bottom:1px solid var(--border);
+  display:flex;
+}
+.tb{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  gap:7px;padding:13px 8px;
+  font-size:12px;color:var(--ink-3);
+  border-right:1px solid var(--border);
+  font-weight:400;letter-spacing:-.01em;
+}
+.tb:last-child{border-right:none}
+.tb-icon{font-size:14px}
+
+/* ── SHARED SECTION STYLES ── */
+.sec{padding:5.5rem 2rem}
+.sec-inner{max-width:980px;margin:0 auto}
+.sec-center{text-align:center}
+.sec-eye{
+  display:block;font-size:13px;font-weight:600;
+  color:var(--g2);letter-spacing:.04em;margin-bottom:8px;
+}
+.sec-h2{
+  font-size:44px;font-weight:700;
+  color:var(--ink-1);letter-spacing:-.03em;
+  line-height:1.06;margin-bottom:10px;
+}
+.sec-sub{
+  font-size:17px;font-weight:400;color:var(--ink-3);
+  line-height:1.6;letter-spacing:-.015em;
+  max-width:480px;margin:0 auto 3rem;
+}
+
+/* ── CATEGORY PILLS ── */
+.cat-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem}
+.cat-p{
+  font-size:13px;font-weight:500;
+  padding:8px 20px;border-radius:var(--r-pill);
+  border:1px solid var(--border);color:var(--ink-3);
+  cursor:pointer;background:#fff;letter-spacing:-.01em;
+  transition:all .2s;font-family:inherit;
+}
+.cat-p:hover{border-color:var(--g2);color:var(--g2)}
+.cat-p.on{background:var(--g1);color:#fff;border-color:var(--g1)}
+
+/* ── PRODUCT GRID ── */
+.prod-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px;margin-bottom:2.5rem;
+}
+.prod-card{
+  background:var(--surface-1);border-radius:var(--r-xl);
+  overflow:hidden;cursor:pointer;
+  border:1px solid transparent;
+  transition:transform .3s,box-shadow .3s,border-color .3s;
+  text-decoration:none;display:block;color:inherit;
+}
+.prod-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--border);
+}
+.prod-thumb{
+  aspect-ratio:4/3;display:flex;
+  align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.prod-scene-wrap{display:flex;gap:7px;align-items:flex-end}
+.ps-c{
+  border-radius:10px;display:flex;
+  align-items:center;justify-content:center;
+}
+.prod-bdg{
+  position:absolute;top:14px;left:14px;
+  font-size:10px;font-weight:600;
+  padding:4px 12px;border-radius:var(--r-pill);
+  letter-spacing:-.01em;
+}
+.pb-pop{background:#fff8e1;color:#7d5a00}
+.pb-std{background:var(--g-pale);color:var(--g1)}
+.pb-free{background:#e8f0fe;color:#1a56db}
+.prod-body{padding:18px 20px 20px}
+.prod-name{
+  font-size:14px;font-weight:600;
+  color:var(--ink-1);margin-bottom:4px;
+  line-height:1.35;letter-spacing:-.015em;
+}
+.prod-meta{
+  font-size:12px;color:var(--ink-4);
+  margin-bottom:14px;letter-spacing:-.01em;
+}
+.prod-foot{display:flex;align-items:center;justify-content:space-between}
+.prod-price{
+  font-size:16px;font-weight:600;
+  color:var(--ink-1);letter-spacing:-.02em;
+}
+.prod-price s{
+  font-size:12px;color:var(--ink-4);
+  font-weight:400;margin-right:5px;
+}
+.btn-cart{
+  font-size:12px;font-weight:600;
+  padding:7px 18px;border-radius:var(--r-pill);
+  background:var(--g1);color:#fff;
+  border:none;cursor:pointer;font-family:inherit;
+  letter-spacing:-.01em;transition:opacity .2s;
+}
+.btn-cart:hover{opacity:.82}
+.sec-btn-outline{
+  font-size:14px;font-weight:500;
+  padding:12px 28px;border-radius:var(--r-pill);
+  border:1px solid var(--border);background:#fff;
+  cursor:pointer;color:var(--ink-2);font-family:inherit;
+  letter-spacing:-.01em;transition:all .2s;
+  text-decoration:none;display:inline-block;
+}
+.sec-btn-outline:hover{border-color:var(--g2);color:var(--g2)}
+
+/* ── HOW IT WORKS ── */
+.hiw{background:#000;padding:5.5rem 2rem}
+.hiw-inner{max-width:900px;margin:0 auto;text-align:center}
+.hiw-eye{display:block;font-size:13px;font-weight:600;color:var(--g-mint);letter-spacing:.04em;margin-bottom:8px}
+.hiw-h2{font-size:44px;font-weight:700;color:#fff;letter-spacing:-.035em;line-height:1.06;margin-bottom:10px}
+.hiw-sub{font-size:17px;font-weight:400;color:rgba(255,255,255,.5);line-height:1.6;max-width:460px;margin:0 auto 3.5rem;letter-spacing:-.015em}
+.hiw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:3rem}
+.hiw-step{background:#141414;padding:2.2rem 1.8rem;text-align:left}
+.hiw-step:first-child{border-radius:var(--r-xl) 0 0 var(--r-xl)}
+.hiw-step:last-child{border-radius:0 var(--r-xl) var(--r-xl) 0}
+.step-n{font-size:11px;font-weight:600;color:var(--g-mint);letter-spacing:.06em;margin-bottom:14px;display:block}
+.step-ico{font-size:30px;margin-bottom:14px;display:block}
+.step-t{font-size:17px;font-weight:600;color:#fff;margin-bottom:7px;letter-spacing:-.02em}
+.step-d{font-size:13px;color:rgba(255,255,255,.42);line-height:1.65;letter-spacing:-.01em}
+
+/* demo */
+.demo-wrap{
+  background:#111;border-radius:var(--r-xl);
+  padding:2.2rem;margin-bottom:2.5rem;
+  border:1px solid rgba(255,255,255,.06);
+  max-width:680px;margin-left:auto;margin-right:auto;
+}
+.demo-label{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1.8rem;text-align:center}
+.demo-layout{display:grid;grid-template-columns:1fr 32px 1fr;align-items:center;gap:0}
+.demo-psd-card{background:#0a0a0a;border:1px solid rgba(255,255,255,.07);border-radius:var(--r-md);padding:1.2rem;text-align:center}
+.psd-box{width:44px;height:52px;background:#2557a7;border-radius:6px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.psd-box span{color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.04em}
+.psd-fname{font-size:12px;font-weight:600;color:#fff;letter-spacing:-.01em;margin-bottom:2px}
+.psd-fmeta{font-size:10px;color:rgba(255,255,255,.3);margin-bottom:10px}
+.so-pill{
+  background:rgba(61,153,80,.1);
+  border:1px dashed rgba(61,153,80,.35);
+  border-radius:6px;padding:5px 8px;
+  display:flex;align-items:center;gap:5px;margin-bottom:10px;
+}
+.so-dot{width:6px;height:6px;border-radius:50%;background:var(--g-mint);flex-shrink:0;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.5)}}
+.so-t{font-size:10px;color:var(--g-mint);font-weight:600}
+.cp-row{display:flex;justify-content:center;gap:5px;margin-top:8px}
+.cp{width:19px;height:19px;border-radius:50%;cursor:pointer;border:2.5px solid transparent;transition:border-color .15s;flex-shrink:0}
+.cp.on{border-color:#fff}
+.demo-arrow{display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-size:22px}
+.scenes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sc{
+  background:#0a0a0a;border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;aspect-ratio:3/4;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:3px;padding:5px;position:relative;
+  transition:border-color .25s;
+}
+.sc.lit{border-color:rgba(61,153,80,.45)}
+.sc-dot{width:13px;height:13px;border-radius:50%;transition:background .3s}
+.sc-line{width:65%;height:1px;background:rgba(255,255,255,.07)}
+.sc-lbl{font-size:7.5px;color:rgba(255,255,255,.22);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.sc-tick{
+  position:absolute;top:3px;right:3px;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--g2);display:flex;align-items:center;justify-content:center;
+  font-size:7px;color:#fff;opacity:0;transition:opacity .2s;font-weight:700;
+}
+.sc.lit .sc-tick{opacity:1}
+.demo-status{font-size:11px;color:rgba(255,255,255,.25);text-align:center;margin-top:8px;font-weight:500;letter-spacing:-.01em}
+.hiw-bens{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hb{background:#141414;border-radius:var(--r-xl);padding:2rem;text-align:left;border:1px solid rgba(255,255,255,.05)}
+.hb-ico{font-size:28px;margin-bottom:14px;display:block}
+.hb-t{font-size:17px;font-weight:600;color:#fff;margin-bottom:6px;letter-spacing:-.02em}
+.hb-d{font-size:13px;color:rgba(255,255,255,.4);line-height:1.65;letter-spacing:-.01em}
+
+/* ── TESTIMONIALS ── */
+.test-sec{background:var(--surface-1);padding:5.5rem 2rem}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:2rem;max-width:980px;margin-left:auto;margin-right:auto}
+.tc{background:#fff;border-radius:var(--r-xl);padding:1.8rem;border:1px solid var(--border)}
+.tc-stars{color:#F59E0B;font-size:13px;margin-bottom:12px;letter-spacing:2px}
+.tc-q{font-size:14px;color:var(--ink-2);line-height:1.7;margin-bottom:16px;letter-spacing:-.015em}
+.tc-auth{display:flex;align-items:center;gap:10px}
+.tc-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.tc-name{font-size:13px;font-weight:600;color:var(--ink-1);letter-spacing:-.01em}
+.tc-role{font-size:11px;color:var(--ink-4)}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:600px;margin:0 auto}
+.stat-c{background:#fff;border-radius:var(--r-xl);padding:1.6rem;text-align:center;border:1px solid var(--border)}
+.stat-n{font-size:30px;font-weight:700;color:var(--g1);letter-spacing:-.04em}
+.stat-l{font-size:12px;color:var(--ink-4);margin-top:4px;letter-spacing:-.01em}
+
+/* ── EMAIL CAPTURE ── */
+.email-sec{background:var(--g1);padding:5.5rem 2rem;text-align:center}
+.email-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(159,225,176,.1);
+  border:1px solid rgba(159,225,176,.22);
+  border-radius:var(--r-pill);padding:6px 16px;
+  font-size:12px;color:var(--g-mint);font-weight:600;
+  margin-bottom:18px;letter-spacing:-.01em;
+}
+.email-h2{
+  font-size:44px;font-weight:700;color:#fff;
+  letter-spacing:-.035em;line-height:1.06;margin-bottom:10px;
+}
+.email-sub{
+  font-size:17px;font-weight:400;color:rgba(255,255,255,.5);
+  margin-bottom:2.2rem;line-height:1.55;letter-spacing:-.015em;
+}
+.email-form{display:flex;gap:8px;max-width:400px;margin:0 auto 12px}
+.email-inp{
+  flex:1;padding:13px 18px;border-radius:var(--r-pill);
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);color:#fff;
+  font-size:14px;font-family:inherit;outline:none;
+  backdrop-filter:blur(10px);letter-spacing:-.01em;
+  transition:border-color .2s;
+}
+.email-inp:focus{border-color:rgba(159,225,176,.5)}
+.email-inp::placeholder{color:rgba(255,255,255,.28)}
+.email-btn{
+  background:var(--g-mint);color:var(--g1);
+  font-size:14px;font-weight:600;
+  padding:13px 24px;border-radius:var(--r-pill);
+  border:none;cursor:pointer;font-family:inherit;
+  white-space:nowrap;letter-spacing:-.01em;transition:opacity .2s;
+}
+.email-btn:hover{opacity:.88}
+.email-note{font-size:11px;color:rgba(255,255,255,.25);letter-spacing:-.01em}
+
+/* ── BLOG ── */
+.blog-sec{padding:5.5rem 2rem;background:#fff}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:0 auto}
+.bc{
+  background:var(--surface-1);border-radius:var(--r-xl);
+  overflow:hidden;cursor:pointer;
+  border:1px solid var(--border-light);
+  transition:transform .25s,box-shadow .25s;
+  text-decoration:none;display:block;color:inherit;
+}
+.bc:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.bc-thumb{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;font-size:34px}
+.bc-body{padding:16px 18px 20px}
+.bc-cat{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--g2);margin-bottom:5px}
+.bc-title{font-size:14px;font-weight:600;color:var(--ink-1);line-height:1.4;margin-bottom:5px;letter-spacing:-.015em}
+.bc-date{font-size:12px;color:var(--ink-4);letter-spacing:-.01em}
+
+/* ── FOOTER ── */
+.footer{background:var(--surface-1);border-top:1px solid var(--border)}
+.footer-top{
+  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  gap:2.5rem;padding:3.5rem 2rem 2.5rem;
+  border-bottom:1px solid var(--border);
+  max-width:980px;margin:0 auto;
+}
+.f-brand{display:flex;align-items:center;gap:9px;margin-bottom:12px;text-decoration:none}
+.f-brand-name{font-size:16px;font-weight:600;color:var(--g1);letter-spacing:-.02em}
+.f-desc{font-size:12px;color:var(--ink-4);line-height:1.75;margin-bottom:16px;letter-spacing:-.01em;max-width:220px}
+.f-socials{display:flex;gap:14px}
+.f-soc{font-size:18px;color:var(--ink-4);text-decoration:none;cursor:pointer;transition:color .15s}
+.f-soc:hover{color:var(--g1)}
+.f-col-title{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-1);margin-bottom:14px}
+.f-link{display:block;font-size:12.5px;color:var(--ink-4);text-decoration:none;margin-bottom:9px;cursor:pointer;letter-spacing:-.01em;transition:color .15s}
+.f-link:hover{color:var(--g1)}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 2rem;max-width:980px;margin:0 auto;
+}
+.f-copy{font-size:11px;color:var(--ink-4);letter-spacing:-.01em}
+.f-pays{display:flex;gap:6px}
+.f-pay{background:#fff;border:1px solid var(--border);border-radius:5px;padding:3px 9px;font-size:10px;color:var(--ink-4);font-weight:600}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero-h1{font-size:38px}
+  .hero-sub{font-size:16px}
+  .hero-mocks{gap:8px}
+  .hm{padding:12px 10px}
+  .sec-h2,.hiw-h2,.email-h2{font-size:30px}
+  .prod-grid{grid-template-columns:1fr}
+  .hiw-steps{grid-template-columns:1fr;gap:8px}
+  .hiw-step:first-child{border-radius:var(--r-xl)}
+  .hiw-step:last-child{border-radius:var(--r-xl)}
+  .hiw-bens,.test-grid,.stats-row,.blog-grid,.footer-top{grid-template-columns:1fr}
+  .demo-layout{grid-template-columns:1fr}
+  .demo-arrow{transform:rotate(90deg);padding:8px 0}
+  .email-form{flex-direction:column}
+  .ann-cd{display:none}
+  .trust{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .tb:nth-child(2){border-right:none}
+}
+
+/* ── SCROLL ANIMATIONS ── */
+@media(prefers-reduced-motion:no-preference){
+  .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  .fade-up.visible{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT BAR ── -->
+<div class="ann">
+  <strong>25% off all packs</strong> this month — offer ends in
+  <span class="ann-cd">
+    <span class="cd-u" id="cd-d">--</span>d
+    <span class="cd-u" id="cd-h">--</span>h
+    <span class="cd-u" id="cd-m">--</span>m
+  </span>
+  &nbsp;·&nbsp;
+  <a href="https://store.omqua.com/collection/all" target="_blank">Shop the sale →</a>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <a class="nav-logo" href="https://store.omqua.com" target="_blank" aria-label="OmQua Systems homepage">
+    <svg width="32" height="32" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#1E5C2B" stroke-width="5.5" fill="none" stroke-dasharray="188 70" stroke-linecap="round"/>
+      <line x1="50" y1="90" x2="50" y2="50" stroke="#1E5C2B" stroke-width="6.5" stroke-linecap="round"/>
+      <line x1="50" y1="68" x2="30" y2="82" stroke="#1E5C2B" stroke-width="5" stroke-linecap="round"/>
+      <line x1="50" y1="76" x2="36" y2="88" stroke="#1E5C2B" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="50" y1="68" x2="70" y2="82" stroke="#1E5C2B" stroke-width="5" stroke-linecap="round"/>
+      <line x1="50" y1="76" x2="64" y2="88" stroke="#1E5C2B" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="26" y2="29" stroke="#1E5C2B" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="74" y2="29" stroke="#1E5C2B" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="50" y1="50" x2="50" y2="13" stroke="#1E5C2B" stroke-width="5" stroke-linecap="round"/>
+      <line x1="26" y1="29" x2="14" y2="17" stroke="#1E5C2B" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="26" y1="29" x2="28" y2="13" stroke="#1E5C2B" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="74" y1="29" x2="86" y2="17" stroke="#1E5C2B" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="74" y1="29" x2="72" y2="13" stroke="#1E5C2B" stroke-width="3.8" stroke-linecap="round"/>
+      <line x1="50" y1="13" x2="40" y2="5" stroke="#1E5C2B" stroke-width="3.2" stroke-linecap="round"/>
+      <line x1="50" y1="13" x2="60" y2="5" stroke="#1E5C2B" stroke-width="3.2" stroke-linecap="round"/>
+    </svg>
+    <div class="nav-wordmark">
+      <span class="nav-name">OmQua</span>
+      <span class="nav-tagline">Systems</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="https://store.omqua.com/collection/all" target="_blank">Shop</a>
+    <a href="https://store.omqua.com/collection/all" target="_blank">Collections</a>
+    <a href="https://store.omqua.com/blog" target="_blank">Blog</a>
+    <a href="https://store.omqua.com/p/about" target="_blank">About</a>
+    <a href="https://store.omqua.com/p/contact" target="_blank">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="nav-icon-btn" aria-label="Search">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <a class="nav-cta-pill" href="https://store.omqua.com/collection/freebies" target="_blank">Free mockups</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Brand mockup packs</span>
+    <h1 class="hero-h1">Luxury-ready.<br><span class="accent">Instantly.</span></h1>
+    <p class="hero-sub">One PSD file. Place your logo once. Every branded scene — cards, stationery, signage — updates at the same time.</p>
+    <div class="hero-ctas">
+      <a class="btn-hero-primary" href="https://store.omqua.com/collection/all" target="_blank">Browse all packs</a>
+      <a class="btn-hero-ghost" href="https://store.omqua.com/collection/freebies" target="_blank">Download free pack</a>
+    </div>
+    <div class="hero-note">From <span>$4.99</span> · Instant download · Photoshop + Photopea compatible</div>
+  </div>
+  <div class="hero-mocks" aria-hidden="true" style="margin-top:48px">
+    <div class="hm" style="width:118px;height:148px;background:#162b1a;transform:rotate(-5deg) translateY(10px)">
+      <div class="hm-ring">
+        <svg width="20" height="20" viewBox="0 0 100 100" fill="none"><path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#9FE1B0" stroke-width="7" fill="none" stroke-dasharray="185 70" stroke-linecap="round"/><line x1="50" y1="88" x2="50" y2="48" stroke="#9FE1B0" stroke-width="8" stroke-linecap="round"/><line x1="50" y1="48" x2="26" y2="28" stroke="#9FE1B0" stroke-width="7" stroke-linecap="round"/><line x1="50" y1="48" x2="74" y2="28" stroke="#9FE1B0" stroke-width="7" stroke-linecap="round"/></svg>
+      </div>
+      <div class="hm-niche">Fragrance</div>
+      <div class="hm-div"></div>
+      <div class="hm-count">14 scenes</div>
+    </div>
+    <div class="hm" style="width:138px;height:172px;background:#0f2416;z-index:2;position:relative">
+      <div class="hm-ring">
+        <svg width="24" height="24" viewBox="0 0 100 100" fill="none"><path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#9FE1B0" stroke-width="7" fill="none" stroke-dasharray="185 70" stroke-linecap="round"/><line x1="50" y1="88" x2="50" y2="48" stroke="#9FE1B0" stroke-width="8" stroke-linecap="round"/><line x1="50" y1="48" x2="26" y2="28" stroke="#9FE1B0" stroke-width="7" stroke-linecap="round"/><line x1="50" y1="48" x2="74" y2="28" stroke="#9FE1B0" stroke-width="7" stroke-linecap="round"/></svg>
+      </div>
+      <div class="hm-niche">Real Estate</div>
+      <div class="hm-div"></div>
+      <div class="hm-count">12 scenes</div>
+      <div class="fpill" style="top:-12px;right:-22px">⭐ 5.0 · 120+ buyers</div>
+      <div class="fpill" style="bottom:-10px;left:-18px"><span class="fp-green"></span>Works in Photopea</div>
+    </div>
+    <div class="hm" style="width:118px;height:148px;background:#162b1a;transform:rotate(5deg) translateY(10px)">
+      <div class="hm-ring">
+        <svg width="20" height="20" viewBox="0 0 100 100" fill="none"><path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#9FE1B0" stroke-width="7" fill="none" stroke-dasharray="185 70" stroke-linecap="round"/><line x1="50" y1="88" x2="50" y2="48" stroke="#9FE1B0" stroke-width="8" stroke-linecap="round"/><line x1="50" y1="48" x2="26" y2="28" stroke="#9FE1B0" stroke-width="7" stroke-linecap="round"/><line x1="50" y1="48" x2="74" y2="28" stroke="#9FE1B0" stroke-width="7" stroke-linecap="round"/></svg>
+      </div>
+      <div class="hm-niche">Café</div>
+      <div class="hm-div"></div>
+      <div class="hm-count">10 scenes</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust" role="list" aria-label="Trust signals">
+  <div class="tb" role="listitem"><span class="tb-icon">🔒</span> Secure checkout</div>
+  <div class="tb" role="listitem"><span class="tb-icon">⚡</span> Instant delivery</div>
+  <div class="tb" role="listitem"><span class="tb-icon">🔄</span> Free updates included</div>
+  <div class="tb" role="listitem"><span class="tb-icon">🎧</span> Support within 24h</div>
+  <div class="tb" role="listitem"><span class="tb-icon">🖥️</span> Photoshop + Photopea</div>
+</div>
+
+<!-- ── PRODUCTS ── -->
+<section class="sec" aria-labelledby="products-heading">
+  <div class="sec-inner">
+    <div class="sec-center fade-up" style="margin-bottom:2.8rem">
+      <span class="sec-eye">Products</span>
+      <h2 class="sec-h2" id="products-heading">Bestselling packs.</h2>
+      <p class="sec-sub" style="margin-bottom:0">Professional brand identity mockup packs for designers and agencies.</p>
+    </div>
+    <div class="cat-row fade-up">
+      <button class="cat-p on" onclick="filterC(this,'all')">All packs</button>
+      <button class="cat-p" onclick="filterC(this,'realestate')">Real Estate</button>
+      <button class="cat-p" onclick="filterC(this,'fragrance')">Fragrance</button>
+      <button class="cat-p" onclick="filterC(this,'cafe')">Café & Coffee</button>
+      <button class="cat-p" onclick="filterC(this,'construction')">Construction</button>
+      <button class="cat-p" onclick="filterC(this,'free')">🎁 Free packs</button>
+    </div>
+    <div class="prod-grid" id="pgrid"></div>
+    <div class="sec-center fade-up">
+      <a class="sec-btn-outline" href="https://store.omqua.com/collection/all" target="_blank">See all 14 packs →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="hiw" aria-labelledby="hiw-heading">
+  <div class="hiw-inner">
+    <span class="hiw-eye">How it works</span>
+    <h2 class="hiw-h2" id="hiw-heading">One edit.<br>Everything updates.</h2>
+    <p class="hiw-sub">A single PSD with smart objects. Place your logo once — all 6 to 20 branded scenes inside refresh at the same time.</p>
+    <div class="hiw-steps">
+      <div class="hiw-step">
+        <span class="step-n">STEP 01</span>
+        <span class="step-ico">📥</span>
+        <div class="step-t">Download one PSD</div>
+        <div class="step-d">Open in Photoshop or the free browser app Photopea. No plugins or setup required.</div>
+      </div>
+      <div class="hiw-step" style="border-left:1px solid #222;border-right:1px solid #222">
+        <span class="step-n">STEP 02</span>
+        <span class="step-ico">✏️</span>
+        <div class="step-t">Place your logo once</div>
+        <div class="step-d">Double-click the smart object layer. Drop your logo in and save. That is your only edit.</div>
+      </div>
+      <div class="hiw-step">
+        <span class="step-n">STEP 03</span>
+        <span class="step-ico">✨</span>
+        <div class="step-t">Every scene updates</div>
+        <div class="step-d">Business cards, letterheads, signage, packaging — every mockup updates simultaneously.</div>
+      </div>
+    </div>
+
+    <!-- Live demo -->
+    <div class="demo-wrap">
+      <div class="demo-label">Live demo — pick a brand colour and watch all scenes update</div>
+      <div class="demo-layout">
+        <div class="demo-psd-card">
+          <div class="psd-box"><span>PSD</span></div>
+          <div class="psd-fname">brand_pack.psd</div>
+          <div class="psd-fmeta">1 file · smart objects</div>
+          <div class="so-pill"><div class="so-dot"></div><div class="so-t">Smart Object active</div></div>
+          <div class="cp-row" id="cp-row">
+            <div class="cp on" data-c="#3D9950" style="background:#3D9950" onclick="pickC(this)"></div>
+            <div class="cp" data-c="#3B8BD4" style="background:#3B8BD4" onclick="pickC(this)"></div>
+            <div class="cp" data-c="#EF9F27" style="background:#EF9F27" onclick="pickC(this)"></div>
+            <div class="cp" data-c="#D85A30" style="background:#D85A30" onclick="pickC(this)"></div>
+            <div class="cp" data-c="#9B59B6" style="background:#9B59B6" onclick="pickC(this)"></div>
+          </div>
+        </div>
+        <div class="demo-arrow" aria-hidden="true">→</div>
+        <div>
+          <div class="scenes-grid" id="sc-grid">
+            <div class="sc lit"><div class="sc-dot" id="d0" style="background:#3D9950"></div><div class="sc-line"></div><div class="sc-lbl">Card</div><div class="sc-tick">✓</div></div>
+            <div class="sc lit"><div class="sc-dot" id="d1" style="background:#3D9950"></div><div class="sc-line"></div><div class="sc-lbl">Letter</div><div class="sc-tick">✓</div></div>
+            <div class="sc lit"><div class="sc-dot" id="d2" style="background:#3D9950"></div><div class="sc-line"></div><div class="sc-lbl">Envelope</div><div class="sc-tick">✓</div></div>
+            <div class="sc lit"><div class="sc-dot" id="d3" style="background:#3D9950"></div><div class="sc-line"></div><div class="sc-lbl">Signage</div><div class="sc-tick">✓</div></div>
+            <div class="sc lit"><div class="sc-dot" id="d4" style="background:#3D9950"></div><div class="sc-line"></div><div class="sc-lbl">Pack</div><div class="sc-tick">✓</div></div>
+            <div class="sc lit"><div class="sc-dot" id="d5" style="background:#3D9950"></div><div class="sc-line"></div><div class="sc-lbl">Print</div><div class="sc-tick">✓</div></div>
+          </div>
+          <div class="demo-status" id="demo-st">✓ All 6 scenes updated instantly</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-bens">
+      <div class="hb">
+        <span class="hb-ico">⏱️</span>
+        <div class="hb-t">Present in minutes</div>
+        <div class="hb-d">One smart edit replaces what used to take hours of manual mockup work.</div>
+      </div>
+      <div class="hb">
+        <span class="hb-ico">🎯</span>
+        <div class="hb-t">Perfectly consistent</div>
+        <div class="hb-d">Every scene flows from one smart object — your brand never drifts across scenes.</div>
+      </div>
+      <div class="hb">
+        <span class="hb-ico">💻</span>
+        <div class="hb-t">No Photoshop needed</div>
+        <div class="hb-d">Photopea is free, browser-based, and handles smart objects perfectly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="test-sec" aria-labelledby="reviews-heading">
+  <div class="sec-center fade-up" style="margin-bottom:2.5rem">
+    <span class="sec-eye">Reviews</span>
+    <h2 class="sec-h2" id="reviews-heading">Loved by designers.</h2>
+    <p class="sec-sub" style="margin-bottom:0">5.0 ★★★★★ across 120+ customers worldwide</p>
+  </div>
+  <div class="test-grid fade-up">
+    <div class="tc">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-q">"I presented a full luxury real estate brand identity to my client in under 20 minutes. They thought I spent days on it. These packs are unreal value."</p>
+      <div class="tc-auth">
+        <div class="tc-av" style="background:#1E5C2B">MR</div>
+        <div><div class="tc-name">Marco R.</div><div class="tc-role">Freelance brand designer</div></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-q">"Changed my client's logo once and watched 14 different mockups update simultaneously. The smart object system is genuinely brilliant."</p>
+      <div class="tc-auth">
+        <div class="tc-av" style="background:#2A7A3B">SA</div>
+        <div><div class="tc-name">Sana A.</div><div class="tc-role">Brand identity consultant</div></div>
+      </div>
+    </div>
+    <div class="tc">
+      <div class="tc-stars">★★★★★</div>
+      <p class="tc-q">"Works perfectly in Photopea — I don't even own Photoshop. The fragrance pack is stunning. Already bought three packs and coming back for more."</p>
+      <div class="tc-auth">
+        <div class="tc-av" style="background:#3D9950">TK</div>
+        <div><div class="tc-name">Thabo K.</div><div class="tc-role">Graphic designer, Johannesburg</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="stats-row fade-up" style="margin-top:1.5rem">
+    <div class="stat-c"><div class="stat-n">120+</div><div class="stat-l">Happy customers</div></div>
+    <div class="stat-c"><div class="stat-n">5.0</div><div class="stat-l">Average rating</div></div>
+    <div class="stat-c"><div class="stat-n">14</div><div class="stat-l">Packs available</div></div>
+  </div>
+</section>
+
+<!-- ── EMAIL CAPTURE ── -->
+<section class="email-sec" aria-labelledby="email-heading">
+  <div class="email-pill">🎁 Free mockup pack included</div>
+  <h2 class="email-h2" id="email-heading">Get a free pack.<br>Just for subscribing.</h2>
+  <p class="email-sub">Join 500+ designers. New packs, exclusive discounts,<br>and branding tips delivered to your inbox.</p>
+  <div class="email-form">
+    <input class="email-inp" type="email" placeholder="your@email.com" aria-label="Email address">
+    <button class="email-btn" onclick="handleSubscribe()">Get free pack</button>
+  </div>
+  <div class="email-note">No spam. Unsubscribe any time. Free pack delivered instantly.</div>
+</section>
+
+<!-- ── BLOG ── -->
+<section class="blog-sec" aria-labelledby="blog-heading">
+  <div style="max-width:980px;margin:0 auto">
+    <div class="sec-center fade-up" style="margin-bottom:2.5rem">
+      <span class="sec-eye">Resources</span>
+      <h2 class="sec-h2" id="blog-heading">From the blog.</h2>
+    </div>
+    <div class="blog-grid">
+      <a class="bc" href="https://store.omqua.com/blog" target="_blank">
+        <div class="bc-thumb" style="background:#F2F8F4">☕</div>
+        <div class="bc-body">
+          <div class="bc-cat">Café & Coffee</div>
+          <div class="bc-title">How to present your café brand like a luxury coffee house</div>
+          <div class="bc-date">March 3, 2026</div>
+        </div>
+      </a>
+      <a class="bc" href="https://store.omqua.com/blog" target="_blank">
+        <div class="bc-thumb" style="background:#EDF0F5">🏙️</div>
+        <div class="bc-body">
+          <div class="bc-cat">Real Estate</div>
+          <div class="bc-title">Luxury real estate branding: how to elevate your property brand</div>
+          <div class="bc-date">Feb 23, 2026</div>
+        </div>
+      </a>
+      <a class="bc" href="https://store.omqua.com/blog" target="_blank">
+        <div class="bc-thumb" style="background:#FDF5F0">🌸</div>
+        <div class="bc-body">
+          <div class="bc-cat">Fragrance</div>
+          <div class="bc-title">How to present your fragrance brand like a luxury house</div>
+          <div class="bc-date">Feb 23, 2026</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-top">
+    <div>
+      <a class="f-brand" href="https://store.omqua.com" target="_blank">
+        <svg width="24" height="24" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#1E5C2B" stroke-width="6" fill="none" stroke-dasharray="185 70" stroke-linecap="round"/><line x1="50" y1="88" x2="50" y2="50" stroke="#1E5C2B" stroke-width="7" stroke-linecap="round"/><line x1="50" y1="50" x2="26" y2="30" stroke="#1E5C2B" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="50" x2="74" y2="30" stroke="#1E5C2B" stroke-width="6" stroke-linecap="round"/><line x1="50" y1="50" x2="50" y2="13" stroke="#1E5C2B" stroke-width="5" stroke-linecap="round"/></svg>
+        <span class="f-brand-name">OmQua Systems</span>
+      </a>
+      <p class="f-desc">Premium brand identity mockup packs for designers and agencies. One file, one edit, every scene updated instantly.</p>
+      <div class="f-socials">
+        <a class="f-soc" href="https://www.instagram.com/omqua_system" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a class="f-soc" href="https://www.tiktok.com/@omqua_system" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+        <a class="f-soc" href="https://www.youtube.com/@omqua_system" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+      </div>
+    </div>
+    <div>
+      <div class="f-col-title">Shop</div>
+      <a class="f-link" href="https://store.omqua.com/collection/all" target="_blank">All packs</a>
+      <a class="f-link" href="https://store.omqua.com/collection/real-estate" target="_blank">Luxury Real Estate</a>
+      <a class="f-link" href="https://store.omqua.com/collection/luxury-fragrance" target="_blank">Luxury Fragrance</a>
+      <a class="f-link" href="https://store.omqua.com/collection/all" target="_blank">Café & Coffee</a>
+      <a class="f-link" href="https://store.omqua.com/collection/freebies" target="_blank">🎁 Free packs</a>
+    </div>
+    <div>
+      <div class="f-col-title">Free Tools</div>
+      <a class="f-link" href="https://store.omqua.com/p/brand-colour-generator" target="_blank">Colour Generator</a>
+      <a class="f-link" href="https://store.omqua.com/p/mockup-finder" target="_blank">Mockup Finder Quiz</a>
+      <a class="f-link" href="https://store.omqua.com/p/ai-prompt-library" target="_blank">AI Prompt Library</a>
+      <a class="f-link" href="https://store.omqua.com/blog" target="_blank">Blog</a>
+    </div>
+    <div>
+      <div class="f-col-title">Support</div>
+      <a class="f-link" href="https://store.omqua.com/p/how-it-works" target="_blank">How it works</a>
+      <a class="f-link" href="https://store.omqua.com/p/photopea-guide" target="_blank">Photopea guide</a>
+      <a class="f-link" href="https://store.omqua.com/p/refund-policy" target="_blank">Refund policy</a>
+      <a class="f-link" href="https://store.omqua.com/p/contact" target="_blank">Contact us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="f-copy">Copyright © 2026 OmQua Systems. All rights reserved.</div>
+    <div class="f-pays">
+      <div class="f-pay">VISA</div>
+      <div class="f-pay">MC</div>
+      <div class="f-pay">PayPal</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── COUNTDOWN ──
+function tick(){
+  const now=new Date(),end=new Date(now.getFullYear(),now.getMonth()+1,0,23,59,59);
+  let diff=Math.max(0,Math.floor((end-now)/1000));
+  const d=Math.floor(diff/86400);diff%=86400;
+  const h=Math.floor(diff/3600);diff%=3600;
+  const m=Math.floor(diff/60);
+  document.getElementById('cd-d').textContent=String(d).padStart(2,'0');
+  document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
+}
+tick();setInterval(tick,30000);
+
+// ── PRODUCTS DATA ──
+const PRODUCTS=[
+  {
+    name:'Luxury Fragrance – Logo Presentation Pack · Signature · v1.0',
+    meta:'14 PSD scenes · Smart objects · Instant download',
+    price:'$14.99',old:'$19.99',badge:'pb-pop',badgeTxt:'Bestseller',
+    cat:'fragrance',bg:'#1A0A0F',acc:'#EF9F27',
+    url:'https://store.omqua.com/l/luxury-fragrance-signature'
+  },
+  {
+    name:'Luxury Real Estate – Brand Identity Pack · Pro · v2.0',
+    meta:'12 PSD scenes · Smart objects · Instant download',
+    price:'$9.99',old:'$13.99',badge:'pb-std',badgeTxt:'Popular',
+    cat:'realestate',bg:'#1C2331',acc:'#B5D4F4',
+    url:'https://store.omqua.com/l/luxury-real-estate-pro'
+  },
+  {
+    name:'Café & Coffee – Brand Identity Pack · Pro · v1.0',
+    meta:'10 PSD scenes · Smart objects · Instant download',
+    price:'$9.99',old:'$13.99',badge:'pb-std',badgeTxt:'New',
+    cat:'cafe',bg:'#2C1810',acc:'#C0DD97',
+    url:'https://store.omqua.com/l/cafe-coffee-pro'
+  },
+  {
+    name:'Luxury Real Estate – Logo Pack · Essentials · v1.0',
+    meta:'6 PSD scenes · Smart objects · Instant download',
+    price:'$4.99',old:null,badge:'pb-std',badgeTxt:'Paid',
+    cat:'realestate',bg:'#1C2331',acc:'#9FE1CB',
+    url:'https://store.omqua.com/l/luxury-real-estate-essentials'
+  },
+  {
+    name:'Construction Co. – Brand Identity Pack · Pro · v1.0',
+    meta:'10 PSD scenes · Smart objects · Instant download',
+    price:'$9.99',old:'$13.99',badge:'pb-std',badgeTxt:'Paid',
+    cat:'construction',bg:'#1C1A14',acc:'#FAC775',
+    url:'https://store.omqua.com/l/construction-pro'
+  },
+  {
+    name:'Luxury Real Estate – Logo Pack · Starter · v1.0',
+    meta:'6 PSD scenes · Smart objects · Instant download',
+    price:'Free',old:null,badge:'pb-free',badgeTxt:'Free',
+    cat:'free',bg:'#1a1714',acc:'#CBA9F4',
+    url:'https://store.omqua.com/l/luxury-real-estate-starter'
+  },
+];
+
+function renderProducts(filter){
+  const grid=document.getElementById('pgrid');
+  const list=filter==='all'
+    ?PRODUCTS
+    :PRODUCTS.filter(p=>p.cat===filter||(filter==='free'&&p.price==='Free'));
+  grid.innerHTML=list.map(p=>`
+    <a class="prod-card" href="${p.url}" target="_blank" rel="noopener">
+      <div class="prod-thumb" style="background:color-mix(in srgb,${p.bg} 80%,transparent)">
+        <div class="prod-scene-wrap">
+          <div class="ps-c" style="width:44px;height:58px;background:${p.bg};border-radius:10px;flex-direction:column;gap:4px">
+            <div style="width:17px;height:17px;border-radius:50%;background:${p.acc}"></div>
+            <div style="width:24px;height:1.5px;background:rgba(255,255,255,.18);border-radius:1px"></div>
+            <div style="width:18px;height:1.5px;background:rgba(255,255,255,.1);border-radius:1px"></div>
+          </div>
+          <div class="ps-c" style="width:38px;height:50px;background:${p.bg};border-radius:8px;opacity:.75;flex-direction:column;gap:3px">
+            <div style="width:14px;height:14px;border-radius:50%;background:${p.acc};opacity:.8"></div>
+            <div style="width:20px;height:1.5px;background:rgba(255,255,255,.15);border-radius:1px"></div>
+          </div>
+          <div class="ps-c" style="width:32px;height:42px;background:${p.bg};border-radius:6px;opacity:.55;flex-direction:column;gap:2px">
+            <div style="width:11px;height:11px;border-radius:50%;background:${p.acc};opacity:.6"></div>
+            <div style="width:16px;height:1.5px;background:rgba(255,255,255,.12);border-radius:1px"></div>
+          </div>
+        </div>
+        <div class="prod-bdg ${p.badge}">${p.badgeTxt}</div>
+      </div>
+      <div class="prod-body">
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-meta">${p.meta}</div>
+        <div class="prod-foot">
+          <div class="prod-price">${p.old?`<s>${p.old}</s>`:``}${p.price}</div>
+          <button class="btn-cart" onclick="event.preventDefault();window.open('${p.url}','_blank')">${p.price==='Free'?'Download free':'Add to cart'}</button>
+        </div>
+      </div>
+    </a>
+  `).join('');
+}
+
+function filterC(el,cat){
+  document.querySelectorAll('.cat-p').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+  renderProducts(cat);
+}
+renderProducts('all');
+
+// ── DEMO COLOUR PICKER ──
+function pickC(el){
+  document.querySelectorAll('.cp').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+  const c=el.dataset.c;
+  const scenes=document.querySelectorAll('.sc');
+  const status=document.getElementById('demo-st');
+  status.textContent='Updating all scenes…';
+  scenes.forEach(s=>s.classList.remove('lit'));
+  for(let i=0;i<6;i++){
+    const dot=document.getElementById('d'+i);
+    const scene=dot?.closest('.sc');
+    if(!dot||!scene)continue;
+    dot.style.background='transparent';
+    scene.classList.remove('lit');
+    setTimeout(()=>{
+      dot.style.background=c;
+      scene.classList.add('lit');
+      if(i===5)status.textContent='✓ All 6 scenes updated instantly';
+    },i*75);
+  }
+}
+
+// ── EMAIL SUBSCRIBE ──
+function handleSubscribe(){
+  const inp=document.querySelector('.email-inp');
+  const val=inp.value.trim();
+  if(!val||!val.includes('@')){inp.focus();inp.style.borderColor='rgba(255,80,80,.5)';return}
+  inp.style.borderColor='';
+  const btn=document.querySelector('.email-btn');
+  btn.textContent='✓ Check your inbox!';
+  btn.style.background='#fff';
+  btn.style.color='var(--g1)';
+  inp.value='';
+  setTimeout(()=>{btn.textContent='Get free pack';btn.style.background='';btn.style.color=''},4000);
+  window.open('https://store.omqua.com/collection/freebies','_blank');
+}
+
+// ── SCROLL ANIMATIONS ──
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:.12});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
